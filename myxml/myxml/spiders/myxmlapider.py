@@ -12,9 +12,6 @@ class MyxmlapiderSpider(XMLFeedSpider):
 
     def parse_node(self, response,node):
         i = MyxmlItem()
-        #i['url'] = selector.select('url').extract()
-        #i['name'] = selector.select('name').extract()
-        #i['description'] = selector.select('description').extract()
         i['title']=node.xpath("/rss/channel/item/title/text()").extract()
         i['link'] = node.xpath("/rss/channel/item/link/text()").extract()
         i['author'] = node.xpath("/rss/channel/item/author/text()").extract()

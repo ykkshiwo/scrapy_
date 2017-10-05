@@ -9,12 +9,15 @@ class AutopdSpider(scrapy.Spider):
     start_urls = ['http://category.dangdang.com/pg1-cid4002203.html']
 
     def parse(self, response):
-        item=AutopjtItem()
-        item["name"]=response.xpath("//a[@class='pic']").extract()
-        item["price"]=response.xpath("//span[@class='price_n']/text()").extract()
-        item["link"]=response.xpath("//a[@class='pic']/@href").extract()
-        item["comnum"]=response.xpath("//a[@name='P_pl']/text()").extract()
-        print(dict(item))
+        print("work")
+        item = AutopjtItem()
+        item["name"] = response.xpath("//a[@class='pic']").extract()
+        #item["price"] = response.xpath("//span[@class='price_n']/text()").extract()
+        #item["link"] = response.xpath("//a[@class='pic']/@href").extract()
+        #item["comnum"] = response.xpath("//a[@name='P_pl']/text()").extract()
+        for i in range(len(item["name"])):
+            print(item["name"][i])
+        #print(item["name"])
         '''yield item
         for i in range(1,76):
             url="http://category.dangdang.com/pg"+str(i)+"-cid4002203.html"

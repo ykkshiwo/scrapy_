@@ -8,9 +8,7 @@
 import scrapy
 
 
-class MyxmlItem(scrapy.Item):
+class LoginDoubanItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    title = scrapy.Field()
-    link = scrapy.Field()
-    author = scrapy.Field()
+    pass

@@ -9,11 +9,13 @@ import json
 
 class AutopjtPipeline(object):
     def __init__(self):
-        self.file=codecs.open("d:/0000py/auto.json","wb",encoding="utf-8")
+        self.file = codecs.open("e:/mypython/myscrapy/auto.json", "wb", encoding="utf-8")
+
     def process_item(self, item, spider):
-        i=json.dumps(dict(item),ensure_ascii=False)
-        line=i+"\n"
+        i = json.dumps(dict(item), ensure_ascii=False)
+        line = i + "\n"
         self.file.write(line)
         return item
-    def close_spider(self,spider):
+
+    def close_spider(self, spider):
         self.file.close()

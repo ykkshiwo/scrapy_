@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for autopjt project
+# Scrapy settings for login_douban project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,16 +9,16 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'autopjt'
+BOT_NAME = 'login_douban'
 
-SPIDER_MODULES = ['autopjt.spiders']
-NEWSPIDER_MODULE = 'autopjt.spiders'
+SPIDER_MODULES = ['login_douban.spiders']
+NEWSPIDER_MODULE = 'login_douban.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'autopjt (+http://www.yourdomain.com)'
-USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/53.0.2785.143 Chrome/53.0.2785.143 Safari/537.36"
-
+#USER_AGENT = 'login_douban (+http://www.yourdomain.com)'
+USER_AGENT = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 " \
+             "(KHTML, like Gecko) Ubuntu Chromium/53.0.2785.143 Chrome/53.0.2785.143 Safari/537.36"
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
@@ -48,13 +48,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'autopjt.middlewares.AutopjtSpiderMiddleware': 543,
+#    'login_douban.middlewares.LoginDoubanSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'autopjt.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'login_douban.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,9 +65,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-'''ITEM_PIPELINES = {
-    'autopjt.pipelines.AutopjtPipeline': 300,
-}'''
+#ITEM_PIPELINES = {
+#    'login_douban.pipelines.LoginDoubanPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
